@@ -1,15 +1,15 @@
-function getWinner(playerChoice, computerChoice) {
-    if (playerChoice === computerChoice) return "TIE";
+function getWinner(player, computer) {
+  if (player === computer) return 'TIE';
 
-    if (
-        (playerChoice === "rock" && computerChoice === "scissors") ||
-        (playerChoice === "paper" && computerChoice === "rock") ||
-        (playerChoice === "scissors" && computerChoice === "paper")
-    ) {
-        return "WIN";
-    }
+  if (
+    (player === 'rock' && computer === 'scissors') ||
+    (player === 'paper' && computer === 'rock') ||
+    (player === 'scissors' && computer === 'paper')
+  ) {
+    return 'WIN';
+  }
 
-    return "LOSE";
+  return 'LOSE';
 }
 
 module.exports = { getWinner };

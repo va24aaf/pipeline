@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rps-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: rps
+  template:
+    metadata:
+      labels:
+        app: rps
+    spec:
+      containers:
+      - name: rps
+        image: adeliah/rps-app:latest
+        ports:
+        - containerPort: 80
